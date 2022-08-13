@@ -1,20 +1,22 @@
 body {
     margin: 0;
-    height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr 5fr;
     grid-template-rows: 1fr 5fr;
+    min-height: 100vh;
 }
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     background-color: #4998cc;
+
 }
 .sidebar > ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    padding-right: 1.5rem;
 }
 .sidebar > ul > li {
     display: flex;
