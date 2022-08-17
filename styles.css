@@ -8,7 +8,7 @@ body {
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    background-color: #4998cc;
+    background-color: #0ea5e9;
 
 }
 .sidebar > ul {
@@ -41,7 +41,14 @@ header {
    
 }
 .main-content {
-    background-color: gray;
+    background-color: #e4e4e7;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 .icon {
     height: 50px;
@@ -78,7 +85,15 @@ header {
     height: 20%;
     border-radius: 10px;
     border-style: none;
-    background-color: #4998cc;
+    background-color:#0ea5e9;
     color: whitesmoke;
     font-size: small;
+}
+.project-icons {
+    height: 25px;
+    width: 25px;
+}
+.trending-icon {
+    height: 40px;
+    width: 40x;
 }
