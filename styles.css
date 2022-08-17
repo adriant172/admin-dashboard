@@ -2,7 +2,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 1.5fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
     min-height: 100vh;
 }
 .sidebar {
@@ -34,7 +34,51 @@ body {
 header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    display:grid;
+    margin: .5rem 2rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr;
+   
 }
 .main-content {
     background-color: gray;
+}
+.icon {
+    height: 50px;
+    width: 50px;
+}
+.notification {
+    height: 20px;
+    width: 20px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#search {
+    width: 80%;
+}
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.greeting {
+    display: flex;
+    align-items: center;
+}
+.header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header-buttons > button {
+    width: 27%;
+    height: 20%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #4998cc;
+    color: whitesmoke;
+    font-size: small;
 }
