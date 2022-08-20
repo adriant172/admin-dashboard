@@ -51,6 +51,15 @@ header {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 }
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
 .icon {
     height: 50px;
     width: 50px;
@@ -105,14 +114,14 @@ h4 {
 h5 {
     margin: 0;
 }
-.card > div > p {
+.card > div > p, .announcement-card > div > p {
     margin-top: 5px;
 }
 .project-cards {
     margin-left: 15px;
     display: grid;
-    grid-template-columns: repeat(2, min(400px, 50%));
-    grid-template-rows: repeat(3, max(250px, 30%));
+    grid-template-columns: repeat(2, min(600px, 50%));
+    grid-template-rows: repeat(3, max(300px, 30%));
     gap: 20px;
 }
 .card {
@@ -133,4 +142,43 @@ h5 {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+.announcements, .trending {
+    margin-right: 1.5rem;
+}
+.announcements > h4 {
+    margin-left: 0;
+}
+.announcement-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    align-items: center;
+    padding: 1.3rem;
+
+}
+.announcement-card > div {
+    border-bottom: solid 1px gray;
+}
+h6 {
+    margin-bottom: 5px;
+}
+.trending-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1.3rem;
+}
+.trending-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+.trending-item > img + span > p {
+    margin: 0;
 }
