@@ -6,8 +6,9 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 1.5fr 5fr;
-    grid-template-rows: 1fr 6fr;
-    min-height: 100vh;
+    grid-template-rows: 1fr 8fr;
+    min-height: 50vh;
+    max-height: 100vh;
 }
 .sidebar {
     grid-column: 1 / 2;
@@ -48,18 +49,18 @@ body {
 header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    display:grid;
+    display: grid;
     margin: .5rem 2rem;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 2fr;
-   
+    grid-template-rows: 1fr 1fr;
 }
 .main-content {
     background-color: #e4e4e7;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 30px;
+    grid-template-rows: repeat(2, minmax(30%, max-content));
+    gap: 5px 30px;
+    padding: 5px;
 }
 .projects {
     grid-column: 1 / 2;
@@ -67,11 +68,11 @@ header {
 }
 .announcements {
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / 2;  
 }
 .trending {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 2 / 3;   
 }
 
 .icon {
@@ -89,19 +90,22 @@ header {
 }
 #search {
     width: 80%;
-    background-color: silver;
+    background-color: rgb(194, 191, 191);
     border-radius: 5px;
+    height: 25px;
     border: none;
     min-width: 40px
 }
 .profile {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 10px;
     align-items: center;
 }
 .greeting {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 .header-buttons {
     display: flex;
@@ -110,7 +114,7 @@ header {
 }
 .header-buttons > button {
     width: 27%;
-    height: 20%;
+    height: 25%;
     border-radius: 10px;
     border-style: none;
     background-color:#0ea5e9;
@@ -118,12 +122,12 @@ header {
     font-size: small;
 }
 .project-icons {
-    height: 25px;
-    width: 25px;
+    height: 1.3rem;
+    width: 1.3rem;
 }
 .trending-icon {
-    height: 40px;
-    width: 40x;
+    height: 1.75rem;
+    width: 1.75rem;
 }
 h4 {
     margin-left: 15px;
@@ -139,8 +143,8 @@ h5 {
     margin-left: 15px;
     display: grid;
     grid-template-columns: repeat(2, min(600px, 50%));
-    grid-template-rows: repeat(3, max(300px, 30%));
-    gap: 20px;
+    grid-template-rows: repeat(3, min(30%));
+    gap: 0.8rem;
     height: 100%;
 }
 .card {
@@ -165,40 +169,55 @@ h5 {
 .announcements, .trending {
     margin-right: 1.5rem;
 }
-.announcements > h4 {
+.announcements > h4, .trending > h4 {
     margin-left: 0;
 }
 .announcement-card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(10%, max-content));
     background-color: whitesmoke;
     border-radius: 5px;
     align-items: center;
     padding: 1.3rem;
-
+    max-height: 75%
+    
 }
 .announcement-card > div {
     border-bottom: solid 1px gray;
 }
-h6 {
+.announcement-card > div > p {
+    font-size: 0.6rem;
+}
+.announcement-card > div > h6 {
+    
+    font-weight: 800;
     margin-bottom: 5px;
 }
 .trending-card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(10%, max-content));
     gap: 1.5rem;
     background-color: whitesmoke;
     border-radius: 5px;
     padding: 1.3rem;
-    height: 83.2%;
+    max-height: 74%
+    
 }
 .trending-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
+    gap: 10px;
+    font-size: 0.8rem
 }
 .trending-item > img + span > p {
     margin: 0;
+}
+
+.profile-icons {
+    background-color: #fcd34d ;
+    border: none;
+    border-radius: 50px;
 }
