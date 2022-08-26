@@ -221,3 +221,9 @@ h5 {
     border: none;
     border-radius: 50px;
 }
+.trending-icon {
+    border: none;
+    background-color: #dc2626;
+    border-radius: 25px;
+    padding: 5px;
+}
